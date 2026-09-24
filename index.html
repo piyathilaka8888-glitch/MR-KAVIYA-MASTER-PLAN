@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MR KAVIYA MASTER PLAN - Dashboard</title>
+    <title>MR KAVIYA MASTER PLAN - Private & Secure</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -27,16 +27,16 @@
 </head>
 <body class="min-h-screen text-slate-200 p-4 sm:p-6">
 
-    <!-- Login View -->
+    <!-- Login View (Private Gate) -->
     <div id="loginView" class="min-h-[90vh] flex items-center justify-center">
-        <div class="w-full max-w-md bg-[#0d0202]/90 backdrop-blur-xl border border-red-950/80 rounded-3xl p-6 sm:p-8 shadow-[0_0_30px_rgba(220,38,38,0.15)] relative overflow-hidden">
+        <div class="w-full max-w-md bg-[#0d0202]/95 backdrop-blur-xl border border-red-950 rounded-3xl p-6 sm:p-8 shadow-[0_0_40px_rgba(220,38,38,0.2)] relative overflow-hidden">
             
-            <div class="text-center text-[10px] sm:text-xs tracking-widest text-red-400 mb-6 font-semibold">
-                PRIVATE // PERSONAL // P 1
+            <div class="text-center text-[10px] sm:text-xs tracking-widest text-red-500 mb-6 font-semibold uppercase">
+                🔒 PRIVATE & SECURE // AUTHORIZED ONLY
             </div>
 
             <div class="flex flex-col items-center justify-center mb-6">
-                <div class="w-16 h-16 rounded-2xl border border-red-500/40 bg-red-950/20 flex flex-col items-center justify-center text-red-500 font-bold shadow-[0_0_20px_rgba(239,68,68,0.2)] mb-3">
+                <div class="w-16 h-16 rounded-2xl border border-red-500/50 bg-red-950/30 flex flex-col items-center justify-center text-red-500 font-bold shadow-[0_0_25px_rgba(239,68,68,0.3)] mb-3">
                     <span class="text-2xl leading-none">K</span>
                 </div>
                 <span class="text-[11px] tracking-wider text-red-400 uppercase">Secret Base of Kaviya</span>
@@ -44,36 +44,42 @@
 
             <div class="text-center mb-6">
                 <h1 class="text-2xl sm:text-3xl font-bold tracking-wider text-white mb-1">
-                    MR KAVIYA <span class="text-red-500">MASTER PLAN</span>
+                    MR KAVIYA <span class="text-red-600">MASTER PLAN</span>
                 </h1>
                 <p class="text-xs text-red-400/80 tracking-wide">PHASE 1 · 14 SEP — 31 DEC 2026</p>
             </div>
 
             <div class="flex justify-center mb-8">
-                <div class="px-4 py-1 rounded-full border border-red-500/30 bg-red-950/30 text-red-400 text-[10px] sm:text-xs tracking-widest uppercase">
-                    Free Personal Edition
+                <div class="px-4 py-1 rounded-full border border-red-500/40 bg-red-950/40 text-red-400 text-[10px] sm:text-xs tracking-widest uppercase">
+                    Strictly Private Edition
                 </div>
             </div>
 
+            <!-- Login Form -->
             <form id="loginForm" class="space-y-4" onsubmit="handleLogin(event)">
                 <div>
-                    <input type="text" id="username" required placeholder="Username (උදා: kaviya)" 
-                        class="w-full bg-[#050202] border border-red-950/80 focus:border-red-500 rounded-xl px-4 py-3.5 text-sm text-white placeholder-red-400/50 focus:outline-none transition-all shadow-inner">
+                    <input type="text" id="username" required placeholder="Username" 
+                        class="w-full bg-[#050202] border border-red-950 focus:border-red-600 rounded-xl px-4 py-3.5 text-sm text-white placeholder-red-500/40 focus:outline-none transition-all shadow-inner">
                 </div>
                 <div>
-                    <input type="password" id="password" required placeholder="Password (උදා: 1234)" 
-                        class="w-full bg-[#050202] border border-red-950/80 focus:border-red-500 rounded-xl px-4 py-3.5 text-sm text-white placeholder-red-400/50 focus:outline-none transition-all shadow-inner">
+                    <input type="password" id="password" required placeholder="Password" 
+                        class="w-full bg-[#050202] border border-red-950 focus:border-red-600 rounded-xl px-4 py-3.5 text-sm text-white placeholder-red-500/40 focus:outline-none transition-all shadow-inner">
                 </div>
                 
+                <!-- Error Alert Message -->
+                <div id="errorMsg" class="hidden text-red-500 text-xs text-center font-semibold bg-red-950/40 border border-red-900/60 py-2.5 rounded-xl animate-pulse">
+                    ⚠️ ප්‍රවේශය ප්‍රතික්ෂේප විය! වැරදි Username එකක් හෝ Password එකකි.
+                </div>
+
                 <button type="submit" 
-                    class="w-full mt-2 bg-[#140303] hover:bg-red-950/40 border border-red-900/60 hover:border-red-500 text-white font-medium py-3.5 px-6 rounded-xl transition-all duration-300 flex items-center justify-center space-x-2 group shadow-lg cursor-pointer">
-                    <span class="tracking-wide text-sm">ENTER SECRET BASE</span>
+                    class="w-full mt-2 bg-[#1a0303] hover:bg-red-950/60 border border-red-800/80 hover:border-red-500 text-white font-medium py-3.5 px-6 rounded-xl transition-all duration-300 flex items-center justify-center space-x-2 group shadow-lg cursor-pointer">
+                    <span class="tracking-wide text-sm">UNLOCK SECRET BASE</span>
                     <span class="text-red-500 transform group-hover:translate-x-1 transition-transform">→</span>
                 </button>
             </form>
 
-            <div class="text-center mt-6 text-[10px] text-red-400/60 leading-relaxed">
-                Local login gate · do not store sensitive secrets in this frontend.
+            <div class="text-center mt-6 text-[10px] text-red-500/50 leading-relaxed">
+                Personal security enabled · No unauthorized access allowed.
             </div>
         </div>
     </div>
@@ -84,12 +90,12 @@
         <!-- Header Bar -->
         <div class="flex flex-col md:flex-row justify-between items-start md:items-center bg-[#0d0202]/90 border border-red-950/80 rounded-2xl p-6 backdrop-blur-md shadow-xl gap-4">
             <div>
-                <div class="text-xs text-red-400 tracking-widest uppercase mb-1">SECURE ACCESS GRANTED // 92-DAY GCE A/L MATHS STREAM</div>
+                <div class="text-xs text-red-400 tracking-widest uppercase mb-1">🔒 PRIVATE ACCESS GRANTED // 92-DAY GCE A/L MATHS STREAM</div>
                 <h1 class="text-2xl sm:text-3xl font-bold text-white">MR KAVIYA MASTER PLAN DASHBOARD</h1>
                 <p class="text-xs text-red-400/80 mt-1">📅 October 1 → December 31 | Mission: Combined Mathematics, Physics & Chemistry 75+</p>
             </div>
             <button onclick="handleLogout()" class="px-4 py-2 bg-red-950/40 border border-red-800/60 hover:bg-red-900/50 text-red-300 text-xs rounded-xl transition-all cursor-pointer">
-                LOGOUT / LOCK
+                LOCK & EXIT
             </button>
         </div>
 
@@ -156,7 +162,7 @@
             </div>
         </div>
 
-        <!-- Detailed Weekly Timetable Cards / Tables (Fully Expanded) -->
+        <!-- Detailed Weekly Timetable Cards / Tables -->
         <div class="bg-[#0d0202]/80 border border-red-950/80 rounded-2xl p-6 backdrop-blur-md">
             <h2 class="text-lg font-bold text-red-400 mb-4 flex items-center gap-2">
                 <span>📅</span> Complete Detailed Weekly Timetable & Checklists
@@ -333,14 +339,29 @@
     <script>
         function handleLogin(event) {
             event.preventDefault();
-            document.getElementById('loginView').classList.add('hidden');
-            document.getElementById('dashboardView').classList.remove('hidden');
+            
+            // ඔබේ රහස් යූසර් නේම් සහ පාස්වර්ඩ් එක මෙහි සකසා ඇත:
+            const myPrivateUsername = "chaturanga";
+            const myPrivatePassword = "kaviya999";
+
+            const inputUser = document.getElementById('username').value.trim();
+            const inputPass = document.getElementById('password').value.trim();
+            const errorMsg = document.getElementById('errorMsg');
+
+            if (inputUser === myPrivateUsername && inputPass === myPrivatePassword) {
+                errorMsg.classList.add('hidden');
+                document.getElementById('loginView').classList.add('hidden');
+                document.getElementById('dashboardView').classList.remove('hidden');
+            } else {
+                errorMsg.classList.remove('hidden');
+            }
         }
 
         function handleLogout() {
             document.getElementById('dashboardView').classList.add('hidden');
             document.getElementById('loginView').classList.remove('hidden');
             document.getElementById('loginForm').reset();
+            document.getElementById('errorMsg').classList.add('hidden');
         }
     </script>
 </body>
