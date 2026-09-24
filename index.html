@@ -10,17 +10,17 @@
         @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap');
         body {
             font-family: 'Space Grotesk', sans-serif;
-            background: radial-gradient(circle at center, #1a0505 0%, #050202 100%);
+            background: radial-gradient(circle at center, #021a08 0%, #020503 100%);
         }
         ::-webkit-scrollbar {
             width: 6px;
             height: 6px;
         }
         ::-webkit-scrollbar-track {
-            background: #050202;
+            background: #020503;
         }
         ::-webkit-scrollbar-thumb {
-            background: #7f1d1d;
+            background: #166534;
             border-radius: 3px;
         }
     </style>
@@ -29,29 +29,29 @@
 
     <!-- Login View (Private Gate) -->
     <div id="loginView" class="min-h-[90vh] flex items-center justify-center">
-        <div class="w-full max-w-md bg-[#0d0202]/95 backdrop-blur-xl border border-red-950 rounded-3xl p-6 sm:p-8 shadow-[0_0_40px_rgba(220,38,38,0.2)] relative overflow-hidden">
+        <div class="w-full max-w-md bg-[#020904]/95 backdrop-blur-xl border border-emerald-900/50 rounded-3xl p-6 sm:p-8 shadow-[0_0_40px_rgba(16,185,129,0.15)] relative overflow-hidden">
             
-            <div class="text-center text-[10px] sm:text-xs tracking-widest text-red-500 mb-6 font-semibold uppercase">
-                🔒 PRIVATE & SECURE // AUTHORIZED ONLY
+            <div class="text-center text-[10px] sm:text-xs tracking-widest text-emerald-400 mb-6 font-semibold uppercase">
+                🔒 PRIVATE // PERSONAL // P 1
             </div>
 
             <div class="flex flex-col items-center justify-center mb-6">
-                <div class="w-16 h-16 rounded-2xl border border-red-500/50 bg-red-950/30 flex flex-col items-center justify-center text-red-500 font-bold shadow-[0_0_25px_rgba(239,68,68,0.3)] mb-3">
+                <div class="w-16 h-16 rounded-2xl border border-emerald-500/40 bg-emerald-950/30 flex flex-col items-center justify-center text-emerald-400 font-bold shadow-[0_0_25px_rgba(16,185,129,0.2)] mb-3">
                     <span class="text-2xl leading-none">K</span>
                 </div>
-                <span class="text-[11px] tracking-wider text-red-400 uppercase">Secret Base of Kaviya</span>
+                <span class="text-[11px] tracking-wider text-emerald-400/80 uppercase">SECRET BASE OF KAVIYA</span>
             </div>
 
             <div class="text-center mb-6">
                 <h1 class="text-2xl sm:text-3xl font-bold tracking-wider text-white mb-1">
-                    MR KAVIYA <span class="text-red-600">MASTER PLAN</span>
+                    MR KAVIYA <span class="text-emerald-400">MASTER PLAN</span>
                 </h1>
-                <p class="text-xs text-red-400/80 tracking-wide">PHASE 1 · 14 SEP — 31 DEC 2026</p>
+                <p class="text-xs text-emerald-400/70 tracking-wide">PHASE 1 · 14 SEP — 31 DEC 2026</p>
             </div>
 
             <div class="flex justify-center mb-8">
-                <div class="px-4 py-1 rounded-full border border-red-500/40 bg-red-950/40 text-red-400 text-[10px] sm:text-xs tracking-widest uppercase">
-                    Strictly Private Edition
+                <div class="px-4 py-1 rounded-full border border-emerald-500/30 bg-emerald-950/30 text-emerald-400 text-[10px] sm:text-xs tracking-widest uppercase">
+                    FREE PERSONAL EDITION
                 </div>
             </div>
 
@@ -59,27 +59,27 @@
             <form id="loginForm" class="space-y-4" onsubmit="handleLogin(event)">
                 <div>
                     <input type="text" id="username" required placeholder="Username" 
-                        class="w-full bg-[#050202] border border-red-950 focus:border-red-600 rounded-xl px-4 py-3.5 text-sm text-white placeholder-red-500/40 focus:outline-none transition-all shadow-inner">
+                        class="w-full bg-[#020503] border border-emerald-950 focus:border-emerald-500 rounded-xl px-4 py-3.5 text-sm text-white placeholder-emerald-500/40 focus:outline-none transition-all shadow-inner">
                 </div>
                 <div>
                     <input type="password" id="password" required placeholder="Password" 
-                        class="w-full bg-[#050202] border border-red-950 focus:border-red-600 rounded-xl px-4 py-3.5 text-sm text-white placeholder-red-500/40 focus:outline-none transition-all shadow-inner">
+                        class="w-full bg-[#020503] border border-emerald-950 focus:border-emerald-500 rounded-xl px-4 py-3.5 text-sm text-white placeholder-emerald-500/40 focus:outline-none transition-all shadow-inner">
                 </div>
                 
                 <!-- Error Alert Message -->
-                <div id="errorMsg" class="hidden text-red-500 text-xs text-center font-semibold bg-red-950/40 border border-red-900/60 py-2.5 rounded-xl animate-pulse">
+                <div id="errorMsg" class="hidden text-emerald-400 text-xs text-center font-semibold bg-emerald-950/40 border border-emerald-900/60 py-2.5 rounded-xl animate-pulse">
                     ⚠️ ප්‍රවේශය ප්‍රතික්ෂේප විය! වැරදි Username එකක් හෝ Password එකකි.
                 </div>
 
                 <button type="submit" 
-                    class="w-full mt-2 bg-[#1a0303] hover:bg-red-950/60 border border-red-800/80 hover:border-red-500 text-white font-medium py-3.5 px-6 rounded-xl transition-all duration-300 flex items-center justify-center space-x-2 group shadow-lg cursor-pointer">
-                    <span class="tracking-wide text-sm">UNLOCK SECRET BASE</span>
-                    <span class="text-red-500 transform group-hover:translate-x-1 transition-transform">→</span>
+                    class="w-full mt-2 bg-[#062010] hover:bg-emerald-950/60 border border-emerald-800/60 hover:border-emerald-500 text-white font-medium py-3.5 px-6 rounded-xl transition-all duration-300 flex items-center justify-center space-x-2 group shadow-lg cursor-pointer">
+                    <span class="tracking-wide text-sm">ENTER SECRET BASE</span>
+                    <span class="text-emerald-400 transform group-hover:translate-x-1 transition-transform">→</span>
                 </button>
             </form>
 
-            <div class="text-center mt-6 text-[10px] text-red-500/50 leading-relaxed">
-                Personal security enabled · No unauthorized access allowed.
+            <div class="text-center mt-6 text-[10px] text-emerald-500/50 leading-relaxed">
+                Local login gate · do not store sensitive secrets in this frontend.
             </div>
         </div>
     </div>
@@ -88,32 +88,32 @@
     <div id="dashboardView" class="max-w-7xl mx-auto hidden space-y-6">
         
         <!-- Header Bar -->
-        <div class="flex flex-col md:flex-row justify-between items-start md:items-center bg-[#0d0202]/90 border border-red-950/80 rounded-2xl p-6 backdrop-blur-md shadow-xl gap-4">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center bg-[#020904]/90 border border-emerald-900/50 rounded-2xl p-6 backdrop-blur-md shadow-xl gap-4">
             <div>
-                <div class="text-xs text-red-400 tracking-widest uppercase mb-1">🔒 PRIVATE ACCESS GRANTED // 92-DAY GCE A/L MATHS STREAM</div>
+                <div class="text-xs text-emerald-400 tracking-widest uppercase mb-1">🔒 PRIVATE ACCESS GRANTED // 92-DAY GCE A/L MATHS STREAM</div>
                 <h1 class="text-2xl sm:text-3xl font-bold text-white">MR KAVIYA MASTER PLAN DASHBOARD</h1>
-                <p class="text-xs text-red-400/80 mt-1">📅 October 1 → December 31 | Mission: Combined Mathematics, Physics & Chemistry 75+</p>
+                <p class="text-xs text-emerald-400/70 mt-1">📅 October 1 → December 31 | Mission: Combined Mathematics, Physics & Chemistry 75+</p>
             </div>
-            <button onclick="handleLogout()" class="px-4 py-2 bg-red-950/40 border border-red-800/60 hover:bg-red-900/50 text-red-300 text-xs rounded-xl transition-all cursor-pointer">
+            <button onclick="handleLogout()" class="px-4 py-2 bg-emerald-950/40 border border-emerald-800/60 hover:bg-emerald-900/50 text-emerald-300 text-xs rounded-xl transition-all cursor-pointer">
                 LOCK & EXIT
             </button>
         </div>
 
         <!-- Targets & Core Study Cycle -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-[#0d0202]/80 border border-red-950/80 rounded-2xl p-6 backdrop-blur-md">
-                <h2 class="text-base font-bold text-red-400 mb-3">🎯 Targets</h2>
+            <div class="bg-[#020904]/80 border border-emerald-900/50 rounded-2xl p-6 backdrop-blur-md">
+                <h2 class="text-base font-bold text-emerald-400 mb-3">🎯 Targets</h2>
                 <ul class="space-y-2 text-xs text-slate-300">
-                    <li class="flex justify-between bg-[#050202] p-2.5 rounded-xl border border-red-950/50"><span>📘 Combined Mathematics</span><span class="text-red-400 font-bold">75+</span></li>
-                    <li class="flex justify-between bg-[#050202] p-2.5 rounded-xl border border-red-950/50"><span>⚡ Physics</span><span class="text-red-400 font-bold">75+</span></li>
-                    <li class="flex justify-between bg-[#050202] p-2.5 rounded-xl border border-red-950/50"><span>🧪 Chemistry</span><span class="text-red-400 font-bold">75+</span></li>
-                    <li class="flex justify-between bg-[#050202] p-2.5 rounded-xl border border-red-950/50"><span class="text-red-300">🏆 Minimum Goal</span><span class="text-red-300 font-bold">විෂය 3ම සමත් වීම</span></li>
+                    <li class="flex justify-between bg-[#020503] p-2.5 rounded-xl border border-emerald-950/50"><span>📘 Combined Mathematics</span><span class="text-emerald-400 font-bold">75+</span></li>
+                    <li class="flex justify-between bg-[#020503] p-2.5 rounded-xl border border-emerald-950/50"><span>⚡ Physics</span><span class="text-emerald-400 font-bold">75+</span></li>
+                    <li class="flex justify-between bg-[#020503] p-2.5 rounded-xl border border-emerald-950/50"><span>🧪 Chemistry</span><span class="text-emerald-400 font-bold">75+</span></li>
+                    <li class="flex justify-between bg-[#020503] p-2.5 rounded-xl border border-emerald-950/50"><span class="text-emerald-300">🏆 Minimum Goal</span><span class="text-emerald-300 font-bold">විෂය 3ම සමත් වීම</span></li>
                 </ul>
             </div>
 
-            <div class="bg-[#0d0202]/80 border border-red-950/80 rounded-2xl p-6 backdrop-blur-md">
-                <h2 class="text-base font-bold text-red-400 mb-3">🔄 Core Study Cycle</h2>
-                <div class="bg-[#050202] p-3 rounded-xl border border-red-950/50 text-xs text-center text-red-400 font-mono tracking-wider space-y-1">
+            <div class="bg-[#020904]/80 border border-emerald-900/50 rounded-2xl p-6 backdrop-blur-md">
+                <h2 class="text-base font-bold text-emerald-400 mb-3">🔄 Core Study Cycle</h2>
+                <div class="bg-[#020503] p-3 rounded-xl border border-emerald-950/50 text-xs text-center text-emerald-400 font-mono tracking-wider space-y-1">
                     <div>LEARN ↓</div>
                     <div>PRACTICE ↓</div>
                     <div>TEST ↓</div>
@@ -121,41 +121,41 @@
                     <div>CORRECT ↓</div>
                     <div>REPEAT</div>
                 </div>
-                <p class="text-[11px] text-red-400/80 mt-2">⚠️ Theory කියවීම පමණක් Study Complete ලෙස නොසැලකේ.</p>
+                <p class="text-[11px] text-emerald-400/70 mt-2">⚠️ Theory කියවීම පමණක් Study Complete ලෙස නොසැලකේ.</p>
             </div>
 
-            <div class="bg-[#0d0202]/80 border border-red-950/80 rounded-2xl p-6 backdrop-blur-md">
-                <h2 class="text-base font-bold text-red-400 mb-3">🗓️ 92-Day Strategy</h2>
+            <div class="bg-[#020904]/80 border border-emerald-900/50 rounded-2xl p-6 backdrop-blur-md">
+                <h2 class="text-base font-bold text-emerald-400 mb-3">🗓️ 92-Day Strategy</h2>
                 <ul class="space-y-2 text-xs text-slate-300">
-                    <li class="bg-[#050202] p-2 rounded-xl border border-red-950/50"><strong class="text-red-400">October (70T / 30Q):</strong> "මට අවබෝධයි."</li>
-                    <li class="bg-[#050202] p-2 rounded-xl border border-red-950/50"><strong class="text-red-400">November (40T / 60Q):</strong> "මට විසඳන්න පුළුවන්."</li>
-                    <li class="bg-[#050202] p-2 rounded-xl border border-red-950/50"><strong class="text-red-400">December (20T / 80P):</strong> "විභාග තත්ත්වය යටතේ පුළුවන්."</li>
+                    <li class="bg-[#020503] p-2 rounded-xl border border-emerald-950/50"><strong class="text-emerald-400">October (70T / 30Q):</strong> "මට අවබෝධයි."</li>
+                    <li class="bg-[#020503] p-2 rounded-xl border border-emerald-950/50"><strong class="text-emerald-400">November (40T / 60Q):</strong> "මට විසඳන්න පුළුවන්."</li>
+                    <li class="bg-[#020503] p-2 rounded-xl border border-emerald-950/50"><strong class="text-emerald-400">December (20T / 80P):</strong> "විභාග තත්ත්වය යටතේ පුළුවන්."</li>
                 </ul>
             </div>
         </div>
 
         <!-- Daily Base Schedule & Routine Summary -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="bg-[#0d0202]/80 border border-red-950/80 rounded-2xl p-6 backdrop-blur-md">
-                <h2 class="text-base font-bold text-red-400 mb-3">⏰ Daily Base Schedule</h2>
+            <div class="bg-[#020904]/80 border border-emerald-900/50 rounded-2xl p-6 backdrop-blur-md">
+                <h2 class="text-base font-bold text-emerald-400 mb-3">⏰ Daily Base Schedule</h2>
                 <ul class="space-y-2 text-xs text-slate-300">
-                    <li class="bg-[#050202] p-2.5 rounded-xl border border-red-950/50 flex justify-between"><span>සඳුදා:</span> <span class="text-white text-right">Maths + Physics Homework Discussion + Gym</span></li>
-                    <li class="bg-[#050202] p-2.5 rounded-xl border border-red-950/50 flex justify-between"><span>අඟහරුවාදා:</span> <span class="text-white text-right">Chemistry + Maths</span></li>
-                    <li class="bg-[#050202] p-2.5 rounded-xl border border-red-950/50 flex justify-between"><span>බදාදා:</span> <span class="text-white text-right">Physics + Maths + Gym</span></li>
-                    <li class="bg-[#050202] p-2.5 rounded-xl border border-red-950/50 flex justify-between"><span>බ්‍රහස්පතින්දා:</span> <span class="text-white text-right">Maths + Physics Theory Class</span></li>
-                    <li class="bg-[#050202] p-2.5 rounded-xl border border-red-950/50 flex justify-between"><span>සිකුරාදා:</span> <span class="text-white text-right">Maths + Chemistry Paper Discussion + Gym</span></li>
-                    <li class="bg-[#050202] p-2.5 rounded-xl border border-red-950/50 flex justify-between"><span>සෙනසුරාදා:</span> <span class="text-white text-right">Chemistry Class + Physics + Maths</span></li>
-                    <li class="bg-[#050202] p-2.5 rounded-xl border border-red-950/50 flex justify-between"><span>ඉරිදා:</span> <span class="text-white text-right">Combined Maths Class + Chemistry + Physics + Weekly Review</span></li>
+                    <li class="bg-[#020503] p-2.5 rounded-xl border border-emerald-950/50 flex justify-between"><span>සඳුදා:</span> <span class="text-white text-right">Maths + Physics Homework Discussion + Gym</span></li>
+                    <li class="bg-[#020503] p-2.5 rounded-xl border border-emerald-950/50 flex justify-between"><span>අඟහරුවාදා:</span> <span class="text-white text-right">Chemistry + Maths</span></li>
+                    <li class="bg-[#020503] p-2.5 rounded-xl border border-emerald-950/50 flex justify-between"><span>බදාදා:</span> <span class="text-white text-right">Physics + Maths + Gym</span></li>
+                    <li class="bg-[#020503] p-2.5 rounded-xl border border-emerald-950/50 flex justify-between"><span>බ්‍රහස්පතින්දා:</span> <span class="text-white text-right">Maths + Physics Theory Class</span></li>
+                    <li class="bg-[#020503] p-2.5 rounded-xl border border-emerald-950/50 flex justify-between"><span>සිකුරාදා:</span> <span class="text-white text-right">Maths + Chemistry Paper Discussion + Gym</span></li>
+                    <li class="bg-[#020503] p-2.5 rounded-xl border border-emerald-950/50 flex justify-between"><span>සෙනසුරාදා:</span> <span class="text-white text-right">Chemistry Class + Physics + Maths</span></li>
+                    <li class="bg-[#020503] p-2.5 rounded-xl border border-emerald-950/50 flex justify-between"><span>ඉරිදා:</span> <span class="text-white text-right">Combined Maths Class + Chemistry + Physics + Weekly Review</span></li>
                 </ul>
             </div>
 
-            <div class="bg-[#0d0202]/80 border border-red-950/80 rounded-2xl p-6 backdrop-blur-md">
-                <h2 class="text-base font-bold text-red-400 mb-3">🛌 Daily Routine & Sleep Note</h2>
+            <div class="bg-[#020904]/80 border border-emerald-900/50 rounded-2xl p-6 backdrop-blur-md">
+                <h2 class="text-base font-bold text-emerald-400 mb-3">🛌 Daily Routine & Sleep Note</h2>
                 <ul class="space-y-3 text-xs text-slate-300">
-                    <li class="bg-[#050202] p-3 rounded-xl border border-red-950/50 flex justify-between items-center"><span>🌅 Wake up</span><span class="text-red-400 font-bold">4:30 AM</span></li>
-                    <li class="bg-[#050202] p-3 rounded-xl border border-red-950/50 flex justify-between items-center"><span>🏫 School</span><span class="text-red-400 font-bold">6:00 AM – 3:00 PM (Mon-Fri)</span></li>
-                    <li class="bg-[#050202] p-3 rounded-xl border border-red-950/50 flex justify-between items-center"><span>🌙 Sleep</span><span class="text-red-500 font-bold">11:00 PM</span></li>
-                    <li class="bg-red-950/20 p-3 rounded-xl border border-red-900/40 text-red-300 leading-relaxed">
+                    <li class="bg-[#020503] p-3 rounded-xl border border-emerald-950/50 flex justify-between items-center"><span>🌅 Wake up</span><span class="text-emerald-400 font-bold">4:30 AM</span></li>
+                    <li class="bg-[#020503] p-3 rounded-xl border border-emerald-950/50 flex justify-between items-center"><span>🏫 School</span><span class="text-emerald-400 font-bold">6:00 AM – 3:00 PM (Mon-Fri)</span></li>
+                    <li class="bg-[#020503] p-3 rounded-xl border border-emerald-950/50 flex justify-between items-center"><span>🌙 Sleep</span><span class="text-emerald-400 font-bold">11:00 PM</span></li>
+                    <li class="bg-emerald-950/20 p-3 rounded-xl border border-emerald-900/40 text-emerald-300 leading-relaxed">
                         ⚠️ <strong>Sleep Note:</strong> 4:30 AM → 11:00 PM gives only 5.5 hours of sleep. Gradually moving bedtime earlier supports concentration & memory.
                     </li>
                 </ul>
@@ -163,161 +163,161 @@
         </div>
 
         <!-- Detailed Weekly Timetable Cards / Tables -->
-        <div class="bg-[#0d0202]/80 border border-red-950/80 rounded-2xl p-6 backdrop-blur-md">
-            <h2 class="text-lg font-bold text-red-400 mb-4 flex items-center gap-2">
+        <div class="bg-[#020904]/80 border border-emerald-900/50 rounded-2xl p-6 backdrop-blur-md">
+            <h2 class="text-lg font-bold text-emerald-400 mb-4 flex items-center gap-2">
                 <span>📅</span> Complete Detailed Weekly Timetable & Checklists
             </h2>
             
             <div class="space-y-6">
                 <!-- Monday Card -->
-                <div class="bg-[#050202] border border-red-950/60 rounded-xl p-4">
-                    <h3 class="text-red-400 font-bold text-sm mb-3">🟦 Monday Schedule & Checklist</h3>
+                <div class="bg-[#020503] border border-emerald-950/60 rounded-xl p-4">
+                    <h3 class="text-emerald-400 font-bold text-sm mb-3">🟦 Monday Schedule & Checklist</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
                         <div class="space-y-2">
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">4:45–6:00 AM</span><span class="text-white">📘 Maths Theory + Questions (1.25h)</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">6:00 AM–3:00 PM</span><span class="text-white">🏫 School</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">3:00–4:00 PM</span><span class="text-white">😌 Rest</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">4:00–5:15 PM</span><span class="text-white">📘 Maths Problem Solving (1.25h)</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">5:15–6:00 PM</span><span class="text-white">🏋️ Gym</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">6:00–7:15 PM</span><span class="text-white">🍽️ Dinner + Personal</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">4:45–6:00 AM</span><span class="text-white">📘 Maths Theory + Questions (1.25h)</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">6:00 AM–3:00 PM</span><span class="text-white">🏫 School</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">3:00–4:00 PM</span><span class="text-white">😌 Rest</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">4:00–5:15 PM</span><span class="text-white">📘 Maths Problem Solving (1.25h)</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">5:15–6:00 PM</span><span class="text-white">🏋️ Gym</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">6:00–7:15 PM</span><span class="text-white">🍽️ Dinner + Personal</span></div>
                         </div>
                         <div class="space-y-2">
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">7:15–7:30 PM</span><span class="text-white">⚡ Physics Preparation</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">7:30–9:00 PM</span><span class="text-white">⚡ Physics Homework Discussion (1.5h)</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">9:00–9:30 PM</span><span class="text-white">⚡ Physics Recap</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">9:30–10:30 PM</span><span class="text-white">📕 Mistake Book & Revision</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">10:30–11:00 PM</span><span class="text-white">📱 Phone / Personal</span></div>
-                            <div class="flex justify-between bg-red-950/30 p-2 rounded border border-red-900/40"><span class="text-red-300">11:00 PM</span><span class="text-red-400 font-bold">🛌 Sleep</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">7:15–7:30 PM</span><span class="text-white">⚡ Physics Preparation</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">7:30–9:00 PM</span><span class="text-white">⚡ Physics Homework Discussion (1.5h)</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">9:00–9:30 PM</span><span class="text-white">⚡ Physics Recap</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">9:30–10:30 PM</span><span class="text-white">📕 Mistake Book & Revision</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">10:30–11:00 PM</span><span class="text-white">📱 Phone / Personal</span></div>
+                            <div class="flex justify-between bg-emerald-950/30 p-2 rounded border border-emerald-900/40"><span class="text-emerald-300">11:00 PM</span><span class="text-emerald-400 font-bold">🛌 Sleep</span></div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Tuesday Card -->
-                <div class="bg-[#050202] border border-red-950/60 rounded-xl p-4">
-                    <h3 class="text-red-400 font-bold text-sm mb-3">🟩 Tuesday Schedule & Checklist</h3>
+                <div class="bg-[#020503] border border-emerald-950/60 rounded-xl p-4">
+                    <h3 class="text-emerald-400 font-bold text-sm mb-3">🟩 Tuesday Schedule & Checklist</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
                         <div class="space-y-2">
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">4:45–6:00 AM</span><span class="text-white">🧪 Chemistry Theory (1.25h)</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">6:00 AM–3:00 PM</span><span class="text-white">🏫 School</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">3:00–4:00 PM</span><span class="text-white">😌 Rest</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">4:00–5:30 PM</span><span class="text-white">🧪 Chemistry Questions (1.5h)</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">5:30–6:15 PM</span><span class="text-white">📱 Break / Personal</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">6:15–7:15 PM</span><span class="text-white">🍽️ Dinner</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">4:45–6:00 AM</span><span class="text-white">🧪 Chemistry Theory (1.25h)</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">6:00 AM–3:00 PM</span><span class="text-white">🏫 School</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">3:00–4:00 PM</span><span class="text-white">😌 Rest</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">4:00–5:30 PM</span><span class="text-white">🧪 Chemistry Questions (1.5h)</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">5:30–6:15 PM</span><span class="text-white">📱 Break / Personal</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">6:15–7:15 PM</span><span class="text-white">🍽️ Dinner</span></div>
                         </div>
                         <div class="space-y-2">
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">7:15–8:00 PM</span><span class="text-white">📘 Maths Revision</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">8:00–8:50 PM</span><span class="text-white">📘 Maths Questions</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">9:00–9:45 PM</span><span class="text-white">🧪 Chemistry MCQ / Structured</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">10:00–10:30 PM</span><span class="text-white">📕 Mistake Book</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">10:30–11:00 PM</span><span class="text-white">📱 Phone / Personal</span></div>
-                            <div class="flex justify-between bg-red-950/30 p-2 rounded border border-red-900/40"><span class="text-red-300">11:00 PM</span><span class="text-red-400 font-bold">🛌 Sleep</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">7:15–8:00 PM</span><span class="text-white">📘 Maths Revision</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">8:00–8:50 PM</span><span class="text-white">📘 Maths Questions</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">9:00–9:45 PM</span><span class="text-white">🧪 Chemistry MCQ / Structured</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">10:00–10:30 PM</span><span class="text-white">📕 Mistake Book</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">10:30–11:00 PM</span><span class="text-white">📱 Phone / Personal</span></div>
+                            <div class="flex justify-between bg-emerald-950/30 p-2 rounded border border-emerald-900/40"><span class="text-emerald-300">11:00 PM</span><span class="text-emerald-400 font-bold">🛌 Sleep</span></div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Wednesday Card -->
-                <div class="bg-[#050202] border border-red-950/60 rounded-xl p-4">
-                    <h3 class="text-red-400 font-bold text-sm mb-3">🟨 Wednesday Schedule & Checklist</h3>
+                <div class="bg-[#020503] border border-emerald-950/60 rounded-xl p-4">
+                    <h3 class="text-emerald-400 font-bold text-sm mb-3">🟨 Wednesday Schedule & Checklist</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
                         <div class="space-y-2">
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">4:45–6:00 AM</span><span class="text-white">⚡ Physics Theory + Formulas</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">6:00 AM–3:00 PM</span><span class="text-white">🏫 School</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">3:00–4:00 PM</span><span class="text-white">😌 Rest</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">4:00–5:30 PM</span><span class="text-white">⚡ Physics Problems (1.5h)</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">5:30–6:15 PM</span><span class="text-white">🏋️ Gym</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">6:15–7:15 PM</span><span class="text-white">🍽️ Dinner</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">4:45–6:00 AM</span><span class="text-white">⚡ Physics Theory + Formulas</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">6:00 AM–3:00 PM</span><span class="text-white">🏫 School</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">3:00–4:00 PM</span><span class="text-white">😌 Rest</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">4:00–5:30 PM</span><span class="text-white">⚡ Physics Problems (1.5h)</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">5:30–6:15 PM</span><span class="text-white">🏋️ Gym</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">6:15–7:15 PM</span><span class="text-white">🍽️ Dinner</span></div>
                         </div>
                         <div class="space-y-2">
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">7:15–8:00 PM</span><span class="text-white">📘 Maths Revision</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">8:00–8:50 PM</span><span class="text-white">📘 Maths Questions</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">9:00–9:45 PM</span><span class="text-white">⚡ Physics Structured Questions</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">10:00–10:30 PM</span><span class="text-white">📕 Mistake Book</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">10:30–11:00 PM</span><span class="text-white">📱 Personal</span></div>
-                            <div class="flex justify-between bg-red-950/30 p-2 rounded border border-red-900/40"><span class="text-red-300">11:00 PM</span><span class="text-red-400 font-bold">🛌 Sleep</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">7:15–8:00 PM</span><span class="text-white">📘 Maths Revision</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">8:00–8:50 PM</span><span class="text-white">📘 Maths Questions</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">9:00–9:45 PM</span><span class="text-white">⚡ Physics Structured Questions</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">10:00–10:30 PM</span><span class="text-white">📕 Mistake Book</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">10:30–11:00 PM</span><span class="text-white">📱 Personal</span></div>
+                            <div class="flex justify-between bg-emerald-950/30 p-2 rounded border border-emerald-900/40"><span class="text-emerald-300">11:00 PM</span><span class="text-emerald-400 font-bold">🛌 Sleep</span></div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Thursday Card -->
-                <div class="bg-[#050202] border border-red-950/60 rounded-xl p-4">
-                    <h3 class="text-red-400 font-bold text-sm mb-3">🟧 Thursday Schedule & Checklist (Physics Class Day)</h3>
+                <div class="bg-[#020503] border border-emerald-950/60 rounded-xl p-4">
+                    <h3 class="text-emerald-400 font-bold text-sm mb-3">🟧 Thursday Schedule & Checklist (Physics Class Day)</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
                         <div class="space-y-2">
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">4:45–6:00 AM</span><span class="text-white">📘 Maths Morning Practice</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">6:00 AM–2:00 PM</span><span class="text-white">🏫 School (Ends at 2:00 PM)</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">2:00–2:30 PM</span><span class="text-white">🍽️ Lunch + Prepare</span></div>
-                            <div class="flex justify-between bg-red-950/40 p-2 rounded border border-red-900/50"><span class="text-red-300 font-semibold">2:30–6:30 PM</span><span class="text-red-400 font-bold">⚡ Physics Theory Class (4h)</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">6:30–7:15 PM</span><span class="text-white">🍽️ Dinner + Rest</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">4:45–6:00 AM</span><span class="text-white">📘 Maths Morning Practice</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">6:00 AM–2:00 PM</span><span class="text-white">🏫 School (Ends at 2:00 PM)</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">2:00–2:30 PM</span><span class="text-white">🍽️ Lunch + Prepare</span></div>
+                            <div class="flex justify-between bg-emerald-950/40 p-2 rounded border border-emerald-900/50"><span class="text-emerald-300 font-semibold">2:30–6:30 PM</span><span class="text-emerald-400 font-bold">⚡ Physics Theory Class (4h)</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">6:30–7:15 PM</span><span class="text-white">🍽️ Dinner + Rest</span></div>
                         </div>
                         <div class="space-y-2">
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">7:15–8:00 PM</span><span class="text-white">🧪 Chemistry Light Revision</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">8:00–8:50 PM</span><span class="text-white">⚡ Physics Class Review</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">9:00–9:45 PM</span><span class="text-white">⚡ Physics Formulas / Questions</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">10:00–10:30 PM</span><span class="text-white">📚 Light Revision</span></div>
-                            <div class="flex justify-between bg-red-950/30 p-2 rounded border border-red-900/40"><span class="text-red-300">11:00 PM</span><span class="text-red-400 font-bold">🛌 Sleep</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">7:15–8:00 PM</span><span class="text-white">🧪 Chemistry Light Revision</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">8:00–8:50 PM</span><span class="text-white">⚡ Physics Class Review</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">9:00–9:45 PM</span><span class="text-white">⚡ Physics Formulas / Questions</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">10:00–10:30 PM</span><span class="text-white">📚 Light Revision</span></div>
+                            <div class="flex justify-between bg-emerald-950/30 p-2 rounded border border-emerald-900/40"><span class="text-emerald-300">11:00 PM</span><span class="text-emerald-400 font-bold">🛌 Sleep</span></div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Friday Card -->
-                <div class="bg-[#050202] border border-red-950/60 rounded-xl p-4">
-                    <h3 class="text-red-400 font-bold text-sm mb-3">🟥 Friday Schedule & Checklist (Chemistry Paper Discussion)</h3>
+                <div class="bg-[#020503] border border-emerald-950/60 rounded-xl p-4">
+                    <h3 class="text-emerald-400 font-bold text-sm mb-3">🟥 Friday Schedule & Checklist (Chemistry Paper Discussion)</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
                         <div class="space-y-2">
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">4:45–6:00 AM</span><span class="text-white">🧪 Chemistry Revision</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">6:00 AM–3:00 PM</span><span class="text-white">🏫 School</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">3:00–4:00 PM</span><span class="text-white">😌 Rest</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">4:00–5:30 PM</span><span class="text-white">📘 Maths Practice (1.5h)</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">5:30–6:15 PM</span><span class="text-white">🏋️ Gym</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">4:45–6:00 AM</span><span class="text-white">🧪 Chemistry Revision</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">6:00 AM–3:00 PM</span><span class="text-white">🏫 School</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">3:00–4:00 PM</span><span class="text-white">😌 Rest</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">4:00–5:30 PM</span><span class="text-white">📘 Maths Practice (1.5h)</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">5:30–6:15 PM</span><span class="text-white">🏋️ Gym</span></div>
                         </div>
                         <div class="space-y-2">
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">7:15–8:00 PM</span><span class="text-white">🧪 Chemistry Paper Preparation</span></div>
-                            <div class="flex justify-between bg-red-950/40 p-2 rounded border border-red-900/50"><span class="text-red-300 font-semibold">8:00–10:00 PM</span><span class="text-red-400 font-bold">🧪 Chemistry Paper Discussion (2h)</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">10:00–10:30 PM</span><span class="text-white">📕 Correct Mistakes</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">10:30–11:00 PM</span><span class="text-white">📱 Phone / Personal</span></div>
-                            <div class="flex justify-between bg-red-950/30 p-2 rounded border border-red-900/40"><span class="text-red-300">11:00 PM</span><span class="text-red-400 font-bold">🛌 Sleep</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">7:15–8:00 PM</span><span class="text-white">🧪 Chemistry Paper Preparation</span></div>
+                            <div class="flex justify-between bg-emerald-950/40 p-2 rounded border border-emerald-900/50"><span class="text-emerald-300 font-semibold">8:00–10:00 PM</span><span class="text-emerald-400 font-bold">🧪 Chemistry Paper Discussion (2h)</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">10:00–10:30 PM</span><span class="text-white">📕 Correct Mistakes</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">10:30–11:00 PM</span><span class="text-white">📱 Phone / Personal</span></div>
+                            <div class="flex justify-between bg-emerald-950/30 p-2 rounded border border-emerald-900/40"><span class="text-emerald-300">11:00 PM</span><span class="text-emerald-400 font-bold">🛌 Sleep</span></div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Saturday Card -->
-                <div class="bg-[#050202] border border-red-950/60 rounded-xl p-4">
-                    <h3 class="text-red-400 font-bold text-sm mb-3">🟪 Saturday Schedule & Checklist (Chemistry Class Day)</h3>
+                <div class="bg-[#020503] border border-emerald-950/60 rounded-xl p-4">
+                    <h3 class="text-emerald-400 font-bold text-sm mb-3">🟪 Saturday Schedule & Checklist (Chemistry Class Day)</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
                         <div class="space-y-2">
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">4:30–5:30 AM</span><span class="text-white">🌅 Wake up & Chemistry Prep</span></div>
-                            <div class="flex justify-between bg-red-950/40 p-2 rounded border border-red-900/50"><span class="text-red-300 font-semibold">6:00 AM–1:00 PM</span><span class="text-red-400 font-bold">🧪 Chemistry Class (7h Tuition)</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">1:00–2:00 PM</span><span class="text-white">🍽️ Lunch + Rest</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">3:00–4:30 PM</span><span class="text-white">⚡ Physics Questions (1.5h)</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">5:00–6:00 PM</span><span class="text-white">📘 Maths Questions</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">4:30–5:30 AM</span><span class="text-white">🌅 Wake up & Chemistry Prep</span></div>
+                            <div class="flex justify-between bg-emerald-950/40 p-2 rounded border border-emerald-900/50"><span class="text-emerald-300 font-semibold">6:00 AM–1:00 PM</span><span class="text-emerald-400 font-bold">🧪 Chemistry Class (7h Tuition)</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">1:00–2:00 PM</span><span class="text-white">🍽️ Lunch + Rest</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">3:00–4:30 PM</span><span class="text-white">⚡ Physics Questions (1.5h)</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">5:00–6:00 PM</span><span class="text-white">📘 Maths Questions</span></div>
                         </div>
                         <div class="space-y-2">
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">6:00–7:00 PM</span><span class="text-white">🏋️ Gym / Personal</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">8:00–8:50 PM</span><span class="text-white">🧪 Chemistry Class Review</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">9:00–9:45 PM</span><span class="text-white">📕 Mistake Book</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">9:45–10:00 PM</span><span class="text-white">📚 Quick Revision</span></div>
-                            <div class="flex justify-between bg-red-950/30 p-2 rounded border border-red-900/40"><span class="text-red-300">11:00 PM</span><span class="text-red-400 font-bold">🛌 Sleep</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">6:00–7:00 PM</span><span class="text-white">🏋️ Gym / Personal</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">8:00–8:50 PM</span><span class="text-white">🧪 Chemistry Class Review</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">9:00–9:45 PM</span><span class="text-white">📕 Mistake Book</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">9:45–10:00 PM</span><span class="text-white">📚 Quick Revision</span></div>
+                            <div class="flex justify-between bg-emerald-950/30 p-2 rounded border border-emerald-900/40"><span class="text-emerald-300">11:00 PM</span><span class="text-emerald-400 font-bold">🛌 Sleep</span></div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Sunday Card -->
-                <div class="bg-[#050202] border border-red-950/60 rounded-xl p-4">
-                    <h3 class="text-red-400 font-bold text-sm mb-3">🟫 Sunday Schedule & Checklist (Maths Class Day & Review)</h3>
+                <div class="bg-[#020503] border border-emerald-950/60 rounded-xl p-4">
+                    <h3 class="text-emerald-400 font-bold text-sm mb-3">🟫 Sunday Schedule & Checklist (Maths Class Day & Review)</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
                         <div class="space-y-2">
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">4:30–5:30 AM</span><span class="text-white">🌅 Wake up & Maths Prep</span></div>
-                            <div class="flex justify-between bg-red-950/40 p-2 rounded border border-red-900/50"><span class="text-red-300 font-semibold">6:00 AM–1:00 PM</span><span class="text-red-400 font-bold">📘 Combined Maths Class (7h Tuition)</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">1:00–2:00 PM</span><span class="text-white">🍽️ Lunch + Rest</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">3:00–4:30 PM</span><span class="text-white">🧪 Chemistry Questions (1.5h)</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">5:00–6:00 PM</span><span class="text-white">⚡ Physics Practice</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">4:30–5:30 AM</span><span class="text-white">🌅 Wake up & Maths Prep</span></div>
+                            <div class="flex justify-between bg-emerald-950/40 p-2 rounded border border-emerald-900/50"><span class="text-emerald-300 font-semibold">6:00 AM–1:00 PM</span><span class="text-emerald-400 font-bold">📘 Combined Maths Class (7h Tuition)</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">1:00–2:00 PM</span><span class="text-white">🍽️ Lunch + Rest</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">3:00–4:30 PM</span><span class="text-white">🧪 Chemistry Questions (1.5h)</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">5:00–6:00 PM</span><span class="text-white">⚡ Physics Practice</span></div>
                         </div>
                         <div class="space-y-2">
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">6:00–7:00 PM</span><span class="text-white">🏋️ Gym / Personal</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">8:00–8:50 PM</span><span class="text-white">📘 Maths Class Review</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">9:00–9:45 PM</span><span class="text-white">📊 Weekly Review & Planning</span></div>
-                            <div class="flex justify-between bg-[#0d0202] p-2 rounded border border-red-950/50"><span class="text-red-400/70">10:00–10:30 PM</span><span class="text-white">📚 Light Revision</span></div>
-                            <div class="flex justify-between bg-red-950/30 p-2 rounded border border-red-900/40"><span class="text-red-300">11:00 PM</span><span class="text-red-400 font-bold">🛌 Sleep</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">6:00–7:00 PM</span><span class="text-white">🏋️ Gym / Personal</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">8:00–8:50 PM</span><span class="text-white">📘 Maths Class Review</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">9:00–9:45 PM</span><span class="text-white">📊 Weekly Review & Planning</span></div>
+                            <div class="flex justify-between bg-[#020904] p-2 rounded border border-emerald-950/50"><span class="text-emerald-400/70">10:00–10:30 PM</span><span class="text-white">📚 Light Revision</span></div>
+                            <div class="flex justify-between bg-emerald-950/30 p-2 rounded border border-emerald-900/40"><span class="text-emerald-300">11:00 PM</span><span class="text-emerald-400 font-bold">🛌 Sleep</span></div>
                         </div>
                     </div>
                 </div>
@@ -326,12 +326,12 @@
         </div>
 
         <!-- Progress Motto Footer -->
-        <div class="bg-[#0d0202]/80 border border-red-950/80 rounded-2xl p-6 text-center backdrop-blur-md">
-            <h3 class="text-xs uppercase tracking-widest text-red-400 mb-2">⭐ Progress Motto</h3>
+        <div class="bg-[#020904]/80 border border-emerald-900/50 rounded-2xl p-6 text-center backdrop-blur-md">
+            <h3 class="text-xs uppercase tracking-widest text-emerald-400 mb-2">⭐ Progress Motto</h3>
             <p class="text-sm font-mono text-white tracking-wider">
                 LEARN. &bull; PRACTICE. &bull; TEST. &bull; MARK. &bull; CORRECT. &bull; REPEAT.
             </p>
-            <div class="text-[10px] text-red-400/60 mt-3">🎯 END — 92 DAYS OF PROGRESS</div>
+            <div class="text-[10px] text-emerald-400/60 mt-3">🎯 END — 92 DAYS OF PROGRESS</div>
         </div>
 
     </div>
@@ -340,7 +340,7 @@
         function handleLogin(event) {
             event.preventDefault();
             
-            // ඔබේ රහස් යූසර් නේම් සහ පාස්වර්ඩ් එක මෙහි සකසා ඇත:
+            // Username සහ Password මෙහි සකසා ඇත:
             const myPrivateUsername = "chaturanga";
             const myPrivatePassword = "kaviya999";
 
