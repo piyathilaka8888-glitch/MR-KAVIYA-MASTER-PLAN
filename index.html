@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MR KAVIYA MASTER PLAN - Login</title>
+    <title>MR KAVIYA MASTER PLAN - Dashboard</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -12,72 +12,300 @@
             font-family: 'Space Grotesk', sans-serif;
             background: radial-gradient(circle at center, #0f172a 0%, #020617 100%);
         }
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #05080f;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 3px;
+        }
     </style>
 </head>
-<body class="min-h-screen flex items-center justify-center p-4 text-slate-200">
+<body class="min-h-screen text-slate-200 p-4 sm:p-6">
 
-    <div class="w-full max-w-md bg-[#090d16]/80 backdrop-blur-xl border border-slate-800/80 rounded-3xl p-6 sm:p-8 shadow-2xl relative overflow-hidden">
-        
-        <!-- Top Metadata -->
-        <div class="text-center text-[10px] sm:text-xs tracking-widest text-slate-400 mb-6 font-semibold">
-            PRIVATE // PERSONAL // P 1
-        </div>
-
-        <!-- Logo / Icon Box -->
-        <div class="flex flex-col items-center justify-center mb-6">
-            <div class="w-16 h-16 rounded-2xl border border-cyan-500/40 bg-cyan-950/20 flex flex-col items-center justify-center text-cyan-400 font-bold shadow-[0_0_20px_rgba(6,182,212,0.15)] mb-3">
-                <span class="text-2xl leading-none">K</span>
-            </div>
-            <span class="text-[11px] tracking-wider text-slate-400 uppercase">Secret Base of Kaviya</span>
-        </div>
-
-        <!-- Main Title -->
-        <div class="text-center mb-6">
-            <h1 class="text-2xl sm:text-3xl font-bold tracking-wider text-white mb-1">
-                MR කවියා <span class="text-cyan-400">MASTER PLAN</span>
-            </h1>
-            <p class="text-xs text-slate-400 tracking-wide">PHASE 1 · 14 SEP — 31 DEC 2026</p>
-        </div>
-
-        <!-- Edition Badge -->
-        <div class="flex justify-center mb-8">
-            <div class="px-4 py-1 rounded-full border border-emerald-500/30 bg-emerald-950/20 text-emerald-400 text-[10px] sm:text-xs tracking-widest uppercase">
-                Free Personal Edition
-            </div>
-        </div>
-
-        <!-- Login Form -->
-        <form id="loginForm" class="space-y-4" onsubmit="handleLogin(event)">
-            <div>
-                <input type="text" id="username" required placeholder="Username" 
-                    class="w-full bg-[#05080f] border border-slate-800 focus:border-cyan-500/60 rounded-xl px-4 py-3.5 text-sm text-white placeholder-slate-500 focus:outline-none transition-all shadow-inner">
-            </div>
-            <div>
-                <input type="password" id="password" required placeholder="Password" 
-                    class="w-full bg-[#05080f] border border-slate-800 focus:border-cyan-500/60 rounded-xl px-4 py-3.5 text-sm text-white placeholder-slate-500 focus:outline-none transition-all shadow-inner">
-            </div>
+    <!-- Login View -->
+    <div id="loginView" class="min-h-[90vh] flex items-center justify-center">
+        <div class="w-full max-w-md bg-[#090d16]/80 backdrop-blur-xl border border-slate-800/80 rounded-3xl p-6 sm:p-8 shadow-2xl relative overflow-hidden">
             
-            <button type="submit" 
-                class="w-full mt-2 bg-[#090d16] hover:bg-cyan-950/30 border border-slate-700 hover:border-cyan-500/50 text-white font-medium py-3.5 px-6 rounded-xl transition-all duration-300 flex items-center justify-center space-x-2 group shadow-lg">
-                <span class="tracking-wide text-sm">ENTER SECRET BASE</span>
-                <span class="text-cyan-400 transform group-hover:translate-x-1 transition-transform">→</span>
-            </button>
-        </form>
+            <div class="text-center text-[10px] sm:text-xs tracking-widest text-slate-400 mb-6 font-semibold">
+                PRIVATE // PERSONAL // P 1
+            </div>
 
-        <!-- Footer Note -->
-        <div class="text-center mt-6 text-[10px] text-slate-500 leading-relaxed">
-            Local login gate · do not store sensitive secrets in this frontend.
+            <div class="flex flex-col items-center justify-center mb-6">
+                <div class="w-16 h-16 rounded-2xl border border-cyan-500/40 bg-cyan-950/20 flex flex-col items-center justify-center text-cyan-400 font-bold shadow-[0_0_20px_rgba(6,182,212,0.15)] mb-3">
+                    <span class="text-2xl leading-none">K</span>
+                </div>
+                <span class="text-[11px] tracking-wider text-slate-400 uppercase">Secret Base of Kaviya</span>
+            </div>
+
+            <div class="text-center mb-6">
+                <h1 class="text-2xl sm:text-3xl font-bold tracking-wider text-white mb-1">
+                    MR KAVIYA <span class="text-cyan-400">MASTER PLAN</span>
+                </h1>
+                <p class="text-xs text-slate-400 tracking-wide">PHASE 1 · 14 SEP — 31 DEC 2026</p>
+            </div>
+
+            <div class="flex justify-center mb-8">
+                <div class="px-4 py-1 rounded-full border border-emerald-500/30 bg-emerald-950/20 text-emerald-400 text-[10px] sm:text-xs tracking-widest uppercase">
+                    Free Personal Edition
+                </div>
+            </div>
+
+            <form id="loginForm" class="space-y-4" onsubmit="handleLogin(event)">
+                <div>
+                    <input type="text" id="username" required placeholder="Username (උදා: kaviya)" 
+                        class="w-full bg-[#05080f] border border-slate-800 focus:border-cyan-500/60 rounded-xl px-4 py-3.5 text-sm text-white placeholder-slate-500 focus:outline-none transition-all shadow-inner">
+                </div>
+                <div>
+                    <input type="password" id="password" required placeholder="Password (උදා: 1234)" 
+                        class="w-full bg-[#05080f] border border-slate-800 focus:border-cyan-500/60 rounded-xl px-4 py-3.5 text-sm text-white placeholder-slate-500 focus:outline-none transition-all shadow-inner">
+                </div>
+                
+                <button type="submit" 
+                    class="w-full mt-2 bg-[#090d16] hover:bg-cyan-950/30 border border-slate-700 hover:border-cyan-500/50 text-white font-medium py-3.5 px-6 rounded-xl transition-all duration-300 flex items-center justify-center space-x-2 group shadow-lg cursor-pointer">
+                    <span class="tracking-wide text-sm">ENTER SECRET BASE</span>
+                    <span class="text-cyan-400 transform group-hover:translate-x-1 transition-transform">→</span>
+                </button>
+            </form>
+
+            <div class="text-center mt-6 text-[10px] text-slate-500 leading-relaxed">
+                Local login gate · do not store sensitive secrets in this frontend.
+            </div>
         </div>
+    </div>
+
+    <!-- Dashboard View (92-Day Master Plan & Schedules) -->
+    <div id="dashboardView" class="max-w-7xl mx-auto hidden space-y-6">
+        
+        <!-- Header Bar -->
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center bg-[#090d16]/90 border border-slate-800 rounded-2xl p-6 backdrop-blur-md shadow-xl gap-4">
+            <div>
+                <div class="text-xs text-cyan-400 tracking-widest uppercase mb-1">SECURE ACCESS GRANTED // 92-DAY GCE A/L MATHS STREAM PLAN</div>
+                <h1 class="text-2xl sm:text-3xl font-bold text-white">MR KAVIYA MASTER PLAN DASHBOARD</h1>
+                <p class="text-xs text-slate-400 mt-1">📅 October 1 → December 31 | Mission: Combined Maths, Physics, Chemistry 75+</p>
+            </div>
+            <button onclick="handleLogout()" class="px-4 py-2 bg-rose-950/30 border border-rose-800/60 hover:bg-rose-900/40 text-rose-300 text-xs rounded-xl transition-all cursor-pointer">
+                LOGOUT / LOCK
+            </button>
+        </div>
+
+        <!-- Targets & Strategy Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-[#090d16]/80 border border-slate-800 rounded-2xl p-6 backdrop-blur-md">
+                <h2 class="text-base font-bold text-cyan-400 mb-3 flex items-center gap-2">🎯 Targets</h2>
+                <ul class="space-y-2 text-xs text-slate-300">
+                    <li class="flex justify-between bg-slate-900/50 p-2.5 rounded-xl border border-slate-800"><span>📘 Combined Mathematics</span><span class="text-cyan-400 font-bold">75+</span></li>
+                    <li class="flex justify-between bg-slate-900/50 p-2.5 rounded-xl border border-slate-800"><span>⚡ Physics</span><span class="text-cyan-400 font-bold">75+</span></li>
+                    <li class="flex justify-between bg-slate-900/50 p-2.5 rounded-xl border border-slate-800"><span>🧪 Chemistry</span><span class="text-cyan-400 font-bold">75+</span></li>
+                </ul>
+            </div>
+
+            <div class="bg-[#090d16]/80 border border-slate-800 rounded-2xl p-6 backdrop-blur-md">
+                <h2 class="text-base font-bold text-cyan-400 mb-3 flex items-center gap-2">🔄 Core Study Cycle</h2>
+                <p class="text-xs text-slate-300 bg-slate-900/50 p-3 rounded-xl border border-slate-800 leading-relaxed">
+                    <strong>Learn → Practice → Test → Mark → Correct → Repeat</strong><br>
+                    <span class="text-rose-400 text-[11px] block mt-1">⚠️ Theory කියවීම පමණක් Study Complete ලෙස නොසැලකේ.</span>
+                </p>
+            </div>
+
+            <div class="bg-[#090d16]/80 border border-slate-800 rounded-2xl p-6 backdrop-blur-md">
+                <h2 class="text-base font-bold text-cyan-400 mb-3 flex items-center gap-2">🗓️ Monthly Focus Strategy</h2>
+                <ul class="space-y-2 text-xs text-slate-300">
+                    <li class="bg-slate-900/50 p-2 rounded-xl border border-slate-800"><strong class="text-emerald-400">October:</strong> 70% Theory + 30% Questions</li>
+                    <li class="bg-slate-900/50 p-2 rounded-xl border border-slate-800"><strong class="text-amber-400">November:</strong> 40% Theory + 60% Questions</li>
+                    <li class="bg-slate-900/50 p-2 rounded-xl border border-slate-800"><strong class="text-rose-400">December:</strong> 20% Theory + 80% Papers</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Detailed Weekly Timetable Section -->
+        <div class="bg-[#090d16]/80 border border-slate-800 rounded-2xl p-6 backdrop-blur-md overflow-hidden">
+            <h2 class="text-lg font-bold text-cyan-400 mb-4 flex items-center gap-2">
+                <span>📅</span> දෛනික හා සතිපතා කාලසටහන (Daily Timetable & Routine)
+            </h2>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left text-xs border-collapse">
+                    <thead>
+                        <tr class="border-b border-slate-800 text-slate-400 bg-slate-900/50">
+                            <th class="p-3">දිනය / දවස</th>
+                            <th class="p-3">වෙලාව</th>
+                            <th class="p-3">ප්‍රධාන වැඩසටහන (Activity)</th>
+                            <th class="p-3 text-right">විස්තරය / පැය</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-800/60 text-slate-300">
+                        <!-- Monday -->
+                        <tr>
+                            <td class="p-3 font-semibold text-cyan-300" rowspan="5">🟦 Monday</td>
+                            <td class="p-3">4:45 – 6:00 AM</td>
+                            <td class="p-3 text-white">Maths Theory + Questions</td>
+                            <td class="p-3 text-right text-emerald-400">1.25h</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3">6:00 AM – 3:00 PM</td>
+                            <td class="p-3 text-white">School</td>
+                            <td class="p-3 text-right text-slate-400">School Hours</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3">7:15 – 9:00 PM</td>
+                            <td class="p-3 text-white">Physics Homework Discussion</td>
+                            <td class="p-3 text-right text-emerald-400">1.75h</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3">9:30 – 10:30 PM</td>
+                            <td class="p-3 text-white">Mistake Book & Revision</td>
+                            <td class="p-3 text-right text-emerald-400">1.0h</td>
+                        </tr>
+                        <tr class="bg-slate-900/40">
+                            <td class="p-3">11:00 PM</td>
+                            <td class="p-3 text-rose-300 font-medium">Sleep (Night Rest)</td>
+                            <td class="p-3 text-right text-rose-400">Phone Off</td>
+                        </tr>
+
+                        <!-- Tuesday -->
+                        <tr class="border-t-2 border-slate-700">
+                            <td class="p-3 font-semibold text-amber-300" rowspan="4">🟩 Tuesday</td>
+                            <td class="p-3">4:45 – 6:00 AM</td>
+                            <td class="p-3 text-white">Chemistry Theory</td>
+                            <td class="p-3 text-right text-emerald-400">1.25h</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3">4:00 – 5:30 PM</td>
+                            <td class="p-3 text-white">Chemistry Questions</td>
+                            <td class="p-3 text-right text-emerald-400">1.5h</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3">9:00 – 9:45 PM</td>
+                            <td class="p-3 text-white">Chemistry MCQ / Structured</td>
+                            <td class="p-3 text-right text-emerald-400">45m</td>
+                        </tr>
+                        <tr class="bg-slate-900/40">
+                            <td class="p-3">11:00 PM</td>
+                            <td class="p-3 text-rose-300 font-medium">Sleep</td>
+                            <td class="p-3 text-right text-rose-400">Phone Off</td>
+                        </tr>
+
+                        <!-- Wednesday -->
+                        <tr class="border-t-2 border-slate-700">
+                            <td class="p-3 font-semibold text-emerald-300" rowspan="4">🟨 Wednesday</td>
+                            <td class="p-3">4:45 – 6:00 AM</td>
+                            <td class="p-3 text-white">Physics Theory + Formulas</td>
+                            <td class="p-3 text-right text-emerald-400">1.25h</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3">4:00 – 5:30 PM</td>
+                            <td class="p-3 text-white">Physics Problems</td>
+                            <td class="p-3 text-right text-emerald-400">1.5h</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3">9:00 – 9:45 PM</td>
+                            <td class="p-3 text-white">Physics Structured Questions</td>
+                            <td class="p-3 text-right text-emerald-400">45m</td>
+                        </tr>
+                        <tr class="bg-slate-900/40">
+                            <td class="p-3">11:00 PM</td>
+                            <td class="p-3 text-rose-300 font-medium">Sleep</td>
+                            <td class="p-3 text-right text-rose-400">Phone Off</td>
+                        </tr>
+
+                        <!-- Thursday -->
+                        <tr class="border-t-2 border-slate-700">
+                            <td class="p-3 font-semibold text-indigo-300" rowspan="3">🟧 Thursday</td>
+                            <td class="p-3">6:00 AM – 2:00 PM</td>
+                            <td class="p-3 text-white">School (Ends early at 2:00 PM)</td>
+                            <td class="p-3 text-right text-slate-400">School</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3">2:30 – 6:30 PM</td>
+                            <td class="p-3 text-amber-300 font-medium">Physics Theory Class</td>
+                            <td class="p-3 text-right text-amber-400">4h Tuition</td>
+                        </tr>
+                        <tr class="bg-slate-900/40">
+                            <td class="p-3">11:00 PM</td>
+                            <td class="p-3 text-rose-300 font-medium">Sleep</td>
+                            <td class="p-3 text-right text-rose-400">Phone Off</td>
+                        </tr>
+
+                        <!-- Friday -->
+                        <tr class="border-t-2 border-slate-700">
+                            <td class="p-3 font-semibold text-pink-300" rowspan="3">🟥 Friday</td>
+                            <td class="p-3">4:00 – 5:30 PM</td>
+                            <td class="p-3 text-white">Maths Practice + Gym</td>
+                            <td class="p-3 text-right text-emerald-400">1.5h</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3">8:00 – 10:00 PM</td>
+                            <td class="p-3 text-amber-300 font-medium">Chemistry Paper Discussion</td>
+                            <td class="p-3 text-right text-amber-400">2h Tuition</td>
+                        </tr>
+                        <tr class="bg-slate-900/40">
+                            <td class="p-3">11:00 PM</td>
+                            <td class="p-3 text-rose-300 font-medium">Sleep</td>
+                            <td class="p-3 text-right text-rose-400">Phone Off</td>
+                        </tr>
+
+                        <!-- Saturday -->
+                        <tr class="border-t-2 border-slate-700">
+                            <td class="p-3 font-semibold text-purple-300" rowspan="3">🟪 Saturday</td>
+                            <td class="p-3">6:00 AM – 1:00 PM</td>
+                            <td class="p-3 text-amber-300 font-medium">Chemistry Class</td>
+                            <td class="p-3 text-right text-amber-400">7h Tuition</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3">3:00 – 4:30 PM</td>
+                            <td class="p-3 text-white">Physics Questions</td>
+                            <td class="p-3 text-right text-emerald-400">1.5h</td>
+                        </tr>
+                        <tr class="bg-slate-900/40">
+                            <td class="p-3">11:00 PM</td>
+                            <td class="p-3 text-rose-300 font-medium">Sleep</td>
+                            <td class="p-3 text-right text-rose-400">Phone Off</td>
+                        </tr>
+
+                        <!-- Sunday -->
+                        <tr class="border-t-2 border-slate-700">
+                            <td class="p-3 font-semibold text-yellow-300" rowspan="4">🟫 Sunday</td>
+                            <td class="p-3">6:00 AM – 1:00 PM</td>
+                            <td class="p-3 text-amber-300 font-medium">Combined Maths Class</td>
+                            <td class="p-3 text-right text-amber-400">7h Tuition</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3">3:00 – 4:30 PM</td>
+                            <td class="p-3 text-white">Chemistry Questions</td>
+                            <td class="p-3 text-right text-emerald-400">1.5h</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3">9:00 – 9:45 PM</td>
+                            <td class="p-3 text-white">Weekly Review & Next Week Planning</td>
+                            <td class="p-3 text-right text-emerald-400">45m</td>
+                        </tr>
+                        <tr class="bg-slate-900/40">
+                            <td class="p-3">11:00 PM</td>
+                            <td class="p-3 text-rose-300 font-medium">Sleep</td>
+                            <td class="p-3 text-right text-rose-400">Phone Off</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
     </div>
 
     <script>
         function handleLogin(event) {
             event.preventDefault();
-            const user = document.getElementById('username').value;
-            const pass = document.getElementById('password').value;
-            
-            // ඔබට අවශ්‍ය පරිදි මෙහි ලොගින් වීම පාලනය කිරීමේ කේත එකතු කරගත හැක.
-            alert('සාර්ථකයි! (මෙය ලෝකල් ලොගින් ගේට් එකකි)');
+            document.getElementById('loginView').classList.add('hidden');
+            document.getElementById('dashboardView').classList.remove('hidden');
+        }
+
+        function handleLogout() {
+            document.getElementById('dashboardView').classList.add('hidden');
+            document.getElementById('loginView').classList.remove('hidden');
+            document.getElementById('loginForm').reset();
         }
     </script>
 </body>
