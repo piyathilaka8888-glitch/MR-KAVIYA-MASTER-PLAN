@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MR KAVIYA MASTER PLAN - Login</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background: radial-gradient(circle at center, #0f172a 0%, #020617 100%);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4 text-slate-200">
+
+    <div class="w-full max-w-md bg-[#090d16]/80 backdrop-blur-xl border border-slate-800/80 rounded-3xl p-6 sm:p-8 shadow-2xl relative overflow-hidden">
+        
+        <!-- Top Metadata -->
+        <div class="text-center text-[10px] sm:text-xs tracking-widest text-slate-400 mb-6 font-semibold">
+            PRIVATE // PERSONAL // P 1
+        </div>
+
+        <!-- Logo / Icon Box -->
+        <div class="flex flex-col items-center justify-center mb-6">
+            <div class="w-16 h-16 rounded-2xl border border-cyan-500/40 bg-cyan-950/20 flex flex-col items-center justify-center text-cyan-400 font-bold shadow-[0_0_20px_rgba(6,182,212,0.15)] mb-3">
+                <span class="text-2xl leading-none">K</span>
+            </div>
+            <span class="text-[11px] tracking-wider text-slate-400 uppercase">Secret Base of Kaviya</span>
+        </div>
+
+        <!-- Main Title -->
+        <div class="text-center mb-6">
+            <h1 class="text-2xl sm:text-3xl font-bold tracking-wider text-white mb-1">
+                MR කවියා <span class="text-cyan-400">MASTER PLAN</span>
+            </h1>
+            <p class="text-xs text-slate-400 tracking-wide">PHASE 1 · 14 SEP — 31 DEC 2026</p>
+        </div>
+
+        <!-- Edition Badge -->
+        <div class="flex justify-center mb-8">
+            <div class="px-4 py-1 rounded-full border border-emerald-500/30 bg-emerald-950/20 text-emerald-400 text-[10px] sm:text-xs tracking-widest uppercase">
+                Free Personal Edition
+            </div>
+        </div>
+
+        <!-- Login Form -->
+        <form id="loginForm" class="space-y-4" onsubmit="handleLogin(event)">
+            <div>
+                <input type="text" id="username" required placeholder="Username" 
+                    class="w-full bg-[#05080f] border border-slate-800 focus:border-cyan-500/60 rounded-xl px-4 py-3.5 text-sm text-white placeholder-slate-500 focus:outline-none transition-all shadow-inner">
+            </div>
+            <div>
+                <input type="password" id="password" required placeholder="Password" 
+                    class="w-full bg-[#05080f] border border-slate-800 focus:border-cyan-500/60 rounded-xl px-4 py-3.5 text-sm text-white placeholder-slate-500 focus:outline-none transition-all shadow-inner">
+            </div>
+            
+            <button type="submit" 
+                class="w-full mt-2 bg-[#090d16] hover:bg-cyan-950/30 border border-slate-700 hover:border-cyan-500/50 text-white font-medium py-3.5 px-6 rounded-xl transition-all duration-300 flex items-center justify-center space-x-2 group shadow-lg">
+                <span class="tracking-wide text-sm">ENTER SECRET BASE</span>
+                <span class="text-cyan-400 transform group-hover:translate-x-1 transition-transform">→</span>
+            </button>
+        </form>
+
+        <!-- Footer Note -->
+        <div class="text-center mt-6 text-[10px] text-slate-500 leading-relaxed">
+            Local login gate · do not store sensitive secrets in this frontend.
+        </div>
+    </div>
+
+    <script>
+        function handleLogin(event) {
+            event.preventDefault();
+            const user = document.getElementById('username').value;
+            const pass = document.getElementById('password').value;
+            
+            // ඔබට අවශ්‍ය පරිදි මෙහි ලොගින් වීම පාලනය කිරීමේ කේත එකතු කරගත හැක.
+            alert('සාර්ථකයි! (මෙය ලෝකල් ලොගින් ගේට් එකකි)');
+        }
+    </script>
+</body>
+</html>
